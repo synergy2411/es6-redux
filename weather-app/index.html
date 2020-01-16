@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" id="address">
+        <button id="btnPredict">Predict</button>
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            $("#btnPredict").on("click", () => {
+                var address = $("#address").val();
+                fetch("https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key=AIzaSyAOIA3C43yp1OJPtEIMVNmdWpc_v5ecXx0")
+                fetch("https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b6907d289e10d714a6e88b30761fae22",{
+                    
+                })
+                .then(response =>{
+                    // console.log(response.json());
+                    return response;
+                })
+                .then(resp => console.log(resp))
+                .catch(err => console.log("ERROR", err))
+                    
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

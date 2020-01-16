@@ -221,21 +221,21 @@
 // console.log("Processing...");
 
 
-function greet(err, greetings){
-    if(err){
-        console.log(err)
-    }else{
-        console.log(greetings);    
-    }
-}
+// function greet(err, greetings){
+//     if(err){
+//         console.log(err)
+//     }else{
+//         console.log(greetings);    
+//     }
+// }
 
-function morningGreet( arr, cb){
-    if(arr.length > 2){
-        cb(null, "Good Morning");
-    }else{
-        cb(new Error("It's not morning"));
-    }
+// function morningGreet( arr, cb){
+//     if(arr.length > 2){
+//         cb(null, "Good Morning");
+//     }else{
+//         cb(new Error("It's not morning"));
+//     }
     
-}
+// }
 
-morningGreet([2,3], greet);
+// morningGreet([2,3], greet);
