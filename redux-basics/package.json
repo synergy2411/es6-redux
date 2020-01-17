@@ -1,0 +1,7 @@
+{
+  "name": "redux-basics",
+  "version": "1.0.0",
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}
