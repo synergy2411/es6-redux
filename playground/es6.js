@@ -418,3 +418,128 @@ const USER = Object.freeze({
 // })
 
 
+
+
+// let arr = [3,4,5];
+
+// const it = arr[Symbol.iterator]();
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+
+// let user = {
+//     age : 32
+// }
+
+// for(let key of user){
+//     console.log(key);
+// }
+
+
+
+// ID Iterator
+// let idMaker = {
+//     [Symbol.iterator] : function(){
+//         let id = 101;
+//         return {
+//             next : function(){
+//                 let value = id > 110 ? undefined : id++;
+//                 let done = !value;
+//                 return {
+//                     done , value
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// const it = idMaker[Symbol.iterator]();
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+// for(let item of idMaker){
+//     console.log(item);
+// }
+
+
+// Range Maker using Iterator
+
+// const rangeMaker = (start, end, step=1) => {
+//     const makeRange = {
+//         [Symbol.iterator](){
+//             return {
+//                 next (){
+//                     let result;
+//                     if(start < end){
+//                         result = {done : false, value : start};
+//                         start += step;
+//                         return result;
+//                     }
+//                     return {done : true, value : undefined}
+//                 }
+//             }
+//         }
+//     }
+//     return makeRange;
+// }
+
+
+
+
+// Range Maker using Generator
+
+// function *rangeMaker(start, end, step = 1){
+//     for(let i = start; i<=end ; i+=step){
+//         yield i;
+//     }
+// }
+
+
+// let it = rangeMaker(201, 205);
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+// console.log(it.next());
+
+// Range Maker
+// for(let item of rangeMaker(201, 220)){
+//     console.log(item);
+// }
+
+
+
+// class Person{
+//     constructor(firstName){
+//         this.firstName = firstName;
+//     }
+// }
+
+// class Student extends Person{
+//     constructor(firstName, lastName){
+//         super(firstName);
+//         this.lastName = lastName;
+//     }
+
+//     greet(){
+//         return "Hello from " + this.firstName + " " + this.lastName;
+//     }
+// }
+
+// let foo = new Student("Foo", "Bar");
+// console.log(foo.greet());
+
+
+
+
+
+// ES5 Module System
+
+const { giveMeNumber } = require("./utils");
+
+console.log(giveMeNumber());
