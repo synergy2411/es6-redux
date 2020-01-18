@@ -1,0 +1,24 @@
+> npm init -y
+> npm install redux --save
+
+// Transpile ES6 to ES5
+Step 1 :
+
+> npm install @babel/core @babel/cli @babel/preset-env --save-dev
+> npm install @babel/cli -g
+
+
+Step 2 :
+create babel.config.js
+
+Step 3 :
+create the npm script to run babel command
+
+// To browserify the code to load the modules on HTML
+
+Step 1:
+> npm install browserify -g
+
+Step 2:
+create the npm script to run browserify command
+
